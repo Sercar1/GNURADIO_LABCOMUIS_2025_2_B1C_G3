@@ -1,0 +1,145 @@
+
+**** 10/01/25 15:15:59 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Lab_fundamentos\lab_4_final-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "../../../lab_4_final-pspicefiles/lab_4_final.lib" 
+* From [PSPICE NETLIST] section of C:\Cadence\Cadence\SPB_Data\cdssetup\OrCAD_PSpice\17.2.0\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 120u 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source LAB_4_FINAL
+M_M1         N14337 N14337 N14405 N14405 Mbreakn           
+M_M2         N17103 N14337 N14405 N14405 Mbreakn           
+R_R1         0 N14337  11470 TC=0,0 
+V_V1         VCC 0 12
+V_V2         0 N14405 12
+M_M3         N17564 N17555 N17103 N14405 Mbreakn           
+R_R2         N17564 VCC  8.2k TC=0,0 
+R_R3         N17555 VCC  100k TC=0,0 
+R_R4         0 N17555  110k TC=0,0 
+C_C1         N17796 N17555  10u  TC=0,0 
+C_C2         0 N17103  10u  TC=0,0 
+V_V3         N17796 0  AC 0
++SIN 0 120m 10k 0 0 0
+
+**** RESUMING bias.cir ****
+.END
+
+**** 10/01/25 15:15:59 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Lab_fundamentos\lab_4_final-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Mbreakn         
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    1.48         
+          KP  990.000000E-06 
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA  100.000000E-06 
+          IS   10.000000E-15 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO    0            
+        CGDO    0            
+        CGBO    0            
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 10/01/25 15:15:59 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Lab_fundamentos\lab_4_final-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   12.0000  (N14337)   -9.2442 (N14405)  -12.0000 (N17103)    3.5290     
+
+(N17555)    6.2857 (N17564)    5.3828 (N17796)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -8.641E-04
+    V_V2        -1.613E-03
+    V_V3         0.000E+00
+
+    TOTAL POWER DISSIPATION   2.97E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/01/25 15:15:59 ****** PSpice 17.2.0 (March 2016) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Lab_fundamentos\lab_4_final-pspicefiles\schematic1\bias.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        0.00
+
